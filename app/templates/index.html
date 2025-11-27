@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head><title>Two Tier App - Products</title></head>
+  <body>
+    <h1>Products</h1>
+    <ul>
+      {% for p in products %}
+      <li>{{ p.id }} - {{ p.name }} - ₹{{ p.price }}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>Add product</h2>
+    <form method="post" action="/add">
+      <input name="name" placeholder="Name" required />
+      <input name="price" placeholder="Price" required />
+      <button type="submit">Add</button>
+    </form>
+  </body>
+</html>
